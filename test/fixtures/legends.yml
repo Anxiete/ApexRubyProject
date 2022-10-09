@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  title: MyString
+  quote: MyText
+  description: MyString
+  passive: MyString
+  tactical: MyString
+  ultimate: MyString
+  role: MyString
+
+two:
+  name: MyString
+  title: MyString
+  quote: MyText
+  description: MyString
+  passive: MyString
+  tactical: MyString
+  ultimate: MyString
+  role: MyString
