@@ -10,4 +10,8 @@ class LegendsController < ApplicationController
   def show
     @legends = Legend.find(params[:id])
   end
+
+  def about
+
+  end
 end
