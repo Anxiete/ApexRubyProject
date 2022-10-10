@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_09_023639) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_10_013955) do
   create_table "legends", force: :cascade do |t|
     t.string "name"
     t.string "title"
@@ -19,9 +19,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_023639) do
     t.string "passive"
     t.string "tactical"
     t.string "ultimate"
-    t.string "role"
+    t.string "img"
+    t.string "image_url"
+    t.integer "role_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_legends_on_role_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -30,4 +33,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_023639) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "legends", "roles"
 end

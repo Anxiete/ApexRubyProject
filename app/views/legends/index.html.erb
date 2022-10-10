@@ -1,0 +1,12 @@
+<h1>Legends</h1>
+
+<ul>
+  <% @legends.each do |legend| %>
+    <li>
+      <a href="/legends/<%= legend.id %>">
+        <h3><%= legend.name %></h3>
+        <img src="<%= legend.img%>" alt="<%= legend.name%>">
+      </a>
+    </li>
+  <% end %>
+</ul>

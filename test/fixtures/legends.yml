@@ -8,7 +8,9 @@ one:
   passive: MyString
   tactical: MyString
   ultimate: MyString
-  role: MyString
+  img: MyString
+  image_url: MyString
+  role: one
 
 two:
   name: MyString
@@ -18,4 +20,6 @@ two:
   passive: MyString
   tactical: MyString
   ultimate: MyString
-  role: MyString
+  img: MyString
+  image_url: MyString
+  role: two

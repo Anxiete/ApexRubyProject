@@ -29,7 +29,9 @@ require "csv"
       description: legend['description'],
       passive: legend['passive'],
       tactical: legend['tactical'],
-      ultimate: legend['ultimate']
+      ultimate: legend['ultimate'],
+      img: legend['img'],
+      image_url: legend['image_url']
       )
     end
 
