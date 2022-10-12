@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "legends#main"
   resources :legends
-  get "/about", to: "legends#about"
+  get "/about", to: "legends#about", as: "aboutproject"
+  get "/roles", to: "legends#roles", as: "legendrole"
+  get "/home", to: "legends#main", as: "homepage"
 end
