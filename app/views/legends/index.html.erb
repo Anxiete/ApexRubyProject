@@ -12,8 +12,11 @@
       </div>
     <% end %>
   </div>
-  <%= page_entries_info @legends %>
-  <%= paginate @legends, window: 2 %>
+  <div class="justify-content-center text-center mt-3 mb-3">
+    <%= page_entries_info @legends %>
+  </div>
+    <%= paginate @legends, window: 2 %>
+
 </div>
 
 
