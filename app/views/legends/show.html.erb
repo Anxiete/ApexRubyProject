@@ -1,9 +1,37 @@
-<h1><%= @legends.name %></h1>
-<h2><%= @legends.title %></h2>
-<blockquote> <i> <%= @legends.quote %> </i> </blockquote>
-<img src="<%= @legends.image_url%>" alt="<%= @legends.name%>" width="500">
-<h2>Role: <%= @legends.role.name %></h2>
-<h3>Passive: <%= @legends.passive %> </h3>
-<h3>Tactical: <%= @legends.tactical %> </h3>
-<h3>Ultimate: <%= @legends.ultimate %> </h3>
-<p><%= @legends.description %></p>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Apex Legends</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<%= homepage_path %>">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/legends">Legends</a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="<%= aboutproject_path %>">About</a>
+        </li>
+        </li><li class="nav-item">
+          <a class="nav-link" href="<%= legendrole_path %>">Roles</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search Legend" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<h1><%= @legend.name %></h1>
+<h2><%= @legend.title %></h2>
+<blockquote> <i> <%= @legend.quote %> </i> </blockquote>
+<img src="<%= @legend.image_url%>" alt="<%= @legend.name%>" width="500">
+<h2>Role: <%= @legend.role.name %></h2>
+<h5>Passive: <%= @legend.passive %> </h5>
+<h5>Tactical: <%= @legend.tactical %> </h5>
+<h5>Ultimate: <%= @legend.ultimate %> </h5>
+<p><%= @legend.description %></p>

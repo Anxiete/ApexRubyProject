@@ -1,43 +1,19 @@
 <h1>Legends</h1>
 
-
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/legends">Legends</a>
-        </li><li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search Legend" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
 <div class="container-fluid">
   <div class="grid">
     <% @legends.each do |legend| %>
       <div class="card g-col-4">
         <img src="<%= legend.img%>" alt="<%= legend.name%> " class="img-fluid">
         <div class="card-body">
-          <a href="/legends/<%= legend.id %>" class="text-decoration-none">
-            <h3 class="card-text text-center "><%= legend.name %></h3>
+           <h3 class="card-text text-center "><%= link_to legend.name, legend, :class => "text-decoration-none"%></h3>
           </a>
         </div>
       </div>
     <% end %>
   </div>
+  <%= page_entries_info @legends %>
+  <%= paginate @legends, window: 2 %>
 </div>
+
 
