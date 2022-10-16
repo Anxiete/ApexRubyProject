@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "legends#main"
-  resources :legends
+  resources :legends, :roles
+
   get "/about", to: "legends#about", as: "aboutproject"
-  get "/roles", to: "legends#roles", as: "legendrole"
   get "/home", to: "legends#main", as: "homepage"
 end

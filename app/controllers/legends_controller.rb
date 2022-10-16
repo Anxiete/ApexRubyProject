@@ -4,7 +4,7 @@ class LegendsController < ApplicationController
   end
 
   def index
-    @legends = Legend.order(:name).includes(:role).all.page(params[:page]).per(5)
+    @legends = Legend.order(:name).includes(:role).all.page(params[:page]).per(5).search(params[:search])
   end
 
   def show
@@ -12,10 +12,6 @@ class LegendsController < ApplicationController
   end
 
   def about
-
-  end
-
-  def roles
 
   end
 end

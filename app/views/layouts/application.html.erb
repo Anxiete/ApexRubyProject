@@ -26,18 +26,18 @@
             <a class="nav-link active" aria-current="page" href="<%= homepage_path %>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/legends">Legends</a>
+            <a class="nav-link" href="<%= legends_path %>">Legends</a>
           </li><li class="nav-item">
             <a class="nav-link" href="<%= aboutproject_path %>">About</a>
           </li>
           </li><li class="nav-item">
-            <a class="nav-link" href="<%= legendrole_path %>">Roles</a>
+            <a class="nav-link" href="/roles">Roles</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search Legend" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+          <%= form_tag(legends_path, method: :get, :class => "d-flex") do %>
+            <%= text_field_tag(:search, params[:search], :class => "form-control me-2") %>
+            <%= submit_tag ("Search"), :class => "btn btn-outline-success", name: nil %>
+          <% end %>
       </div>
     </div>
   </nav>

@@ -19,7 +19,7 @@ require "csv"
    legends.each do |legend|
 
     # Legend's role
-    role_init = Role.find_or_create_by(name: legend['role'])
+    role_init = Role.find_or_create_by(name: legend['role'], role_img: legend['role_img'])
 
     if role_init && role_init.valid?
       legends_init = role_init.legends.create(

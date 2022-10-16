@@ -7,7 +7,6 @@
         <img src="<%= legend.img%>" alt="<%= legend.name%> " class="img-fluid">
         <div class="card-body">
            <h3 class="card-text text-center "><%= link_to legend.name, legend, :class => "text-decoration-none"%></h3>
-          </a>
         </div>
       </div>
     <% end %>
@@ -16,7 +15,6 @@
     <%= page_entries_info @legends %>
   </div>
     <%= paginate @legends, window: 2 %>
-
 </div>
 
 
