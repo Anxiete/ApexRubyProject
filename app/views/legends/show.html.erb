@@ -1,17 +1,15 @@
 <div class="container-fluid d-flex justify-content-center">
-    <div class="card w-75">
+    <div class="card w-75 border border-5 border-dark">
       <img src="<%= @legend.image_url%>" alt="<%= @legend.name%>" class="img-fluid">
       <div class="position-absolute top-0 start-50 ">
         <h1 class="pb-3 pt-5"><%= @legend.name %></h1>
         <h2><%= @legend.title %></h2>
         <blockquote class="pb-5"> <i> <%= @legend.quote %> </i> </blockquote>
-
         <h2>Role: <%= @legend.role.name %></h2>
         <h5>Passive: <%= @legend.passive %> </h5>
         <h5>Tactical: <%= @legend.tactical %> </h5>
         <h5 class="pb-5">Ultimate: <%= @legend.ultimate %> </h5>
         <p><%= @legend.description %></p>
-
       </div>
     </div>
   </div>

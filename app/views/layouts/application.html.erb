@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-<body>
+<body style="background-color:#E3DFD6;">
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Apex Legends</a>
@@ -46,10 +46,14 @@
     </div>
   </div>
 </nav>
-  <% if !@home_banner %>
-     <h1 class="text-center">Legends</h1>
-  <% else %>
-
+  <% if @role_header %>
+    <h1 class="text-center">Roles</h1>
+  <% elsif @about_header %>
+    <h1 class="text-center">About</h1>
+  <% elsif @index_header || @role_all_legends %>
+    <h1 class="text-center">Legends</h1>
+  <% elsif @show_header %>
+    <h1 class="text-center">Legend</h1>
   <% end %>
     <%= yield %>
 </body>
