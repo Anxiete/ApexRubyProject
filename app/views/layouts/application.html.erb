@@ -47,13 +47,13 @@
   </div>
 </nav>
   <% if @role_header %>
-    <h1 class="text-center">Roles</h1>
+    <h1 class="text-center pt-4">Roles</h1>
   <% elsif @about_header %>
-    <h1 class="text-center">About</h1>
+    <h1 class="text-center p-3">About</h1>
   <% elsif @index_header || @role_all_legends || @search_header %>
-    <h1 class="text-center">Legends</h1>
+    <h1 class="text-center p-4">Legends</h1>
   <% elsif @show_header %>
-    <h1 class="text-center">Legend</h1>
+    <h1 class="text-center pt-4">Legend</h1>
   <% end %>
     <%= yield %>
 </body>
