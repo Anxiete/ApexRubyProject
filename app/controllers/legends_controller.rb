@@ -18,14 +18,15 @@ class LegendsController < ApplicationController
   end
 
   def search
-      search = params[:search]
-      role = params[:roles].to_s
+    @search_header = true
+    search = params[:search]
+    role = params[:roles].to_s
 
-      @legends = if params[:roles] == ""
-        Legend.where('name LIKE ?', "%#{search}%")
-      else
-        Legend.where('name LIKE ? AND role_id = ?', "%#{search}%", "#{role}")
-      end
+    @legends = if params[:roles] == ""
+      Legend.where('name LIKE ?', "%#{search}%")
+    else
+      Legend.where('name LIKE ? AND role_id = ?', "%#{search}%", "#{role}")
+    end
   end
 end
 

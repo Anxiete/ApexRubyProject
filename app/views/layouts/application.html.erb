@@ -34,14 +34,14 @@
             <a class="nav-link" href="/roles">Roles</a>
           </li>
         </ul>
-        <form action="<%= search_path %>" method="get">
-          <select name="roles">
-          <% Role.all.each do |role| %>
-            <option value="<%= role.id %>"><%= role.name %></option>
-          <% end %>
-          </select>
+        <form action="<%= search_path %>" method="get" class="d-flex">
+            <select name="roles" class="form-select rounded me-2">
+              <% Role.all.each do |role| %>
+                <option value="<%= role.id %>"><%= role.name %></option>
+              <% end %>
+            </select>
           <%= text_field_tag(:search, params[:search], :class => "form-control me-2") %>
-            <%= submit_tag "Search", :class => "btn btn-outline-success", name: nil %>
+          <%= submit_tag "Search", :class => "btn btn-outline-success", name: nil %>
         </form>
     </div>
   </div>
@@ -50,7 +50,7 @@
     <h1 class="text-center">Roles</h1>
   <% elsif @about_header %>
     <h1 class="text-center">About</h1>
-  <% elsif @index_header || @role_all_legends %>
+  <% elsif @index_header || @role_all_legends || @search_header %>
     <h1 class="text-center">Legends</h1>
   <% elsif @show_header %>
     <h1 class="text-center">Legend</h1>
