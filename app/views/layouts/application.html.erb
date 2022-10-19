@@ -46,7 +46,11 @@
     </div>
   </div>
 </nav>
-<h1 class="text-center">Legends</h1>
+  <% if !@home_banner %>
+     <h1 class="text-center">Legends</h1>
+  <% else %>
+
+  <% end %>
     <%= yield %>
 </body>
 </html>
